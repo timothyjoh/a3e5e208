@@ -6,10 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "yarn test:unit && yarn test:e2e",
+    "test": "yarn test:jest && yarn test:e2e",
     "test:e2e": "playwright test",
-    "test:unit": "jest --passWithNoTests",
-    "test:unit:watch": "jest --watch"
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:watch": "jest --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.5.8",
