@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import {Accordion} from 'react-bootstrap'
+import styles from '@styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,53 @@ const Home: NextPage = () => {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
+
+        <button className="btn btn-primary m-3">Bootstrap Button Primary</button>
+
+        <div className="dropdown m-3">
+        <button
+          className="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          id="dropdownMenuButton1"
+          aria-expanded="false"
+        >
+          Bootstrap Dropdown
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a className="dropdown-item" href="#">
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Option 3
+            </a>
+          </li>
+        </ul>
+        </div>
+
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Accordion Item #1</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet...
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Accordion Item #2</Accordion.Header>
+            <Accordion.Body>
+              Duis aute irure dolor in reprehenderit in voluptate...
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

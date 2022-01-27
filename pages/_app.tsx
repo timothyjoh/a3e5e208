@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import '@styles/globals.scss'
 import type { AppProps } from 'next/app'
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if (typeof document !== undefined) {
+      import("bootstrap/dist/js/bootstrap")
+    }
+  }, [])
+
   return <Component {...pageProps} />
 }
 
