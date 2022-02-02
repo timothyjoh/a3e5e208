@@ -51,11 +51,10 @@ jobs:
       - name: Installing JS packages
         run: yarn install --prefer-offline --frozen-lockfile
 
-      - name: Jest
-        run: yarn test:jest
-
-      - name: E2E
-        run: yarn test:e2e
+      - name: Install Playwright.dev browsers
+        run: |
+          npx playwright install
+          sudo npx playwright install-deps
 
       - name: ESLint
         run: yarn lint
@@ -63,8 +62,12 @@ jobs:
       - name: TypeScript
         run: yarn build
 
-  rspec:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Nothing at all
-      run: echo Nothing to do here!
+      - name: Jest
+        run: yarn test:jest
+
+      - name: E2E
+        run: yarn test:e2e
+
+
+
+

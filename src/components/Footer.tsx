@@ -8,9 +8,11 @@ export const Footer: React.FC = () => (
       <div className="row">
         <div className="col-12 col-lg-3 mb-4">
           <div className="app-logo app-logo_size-md header__app-logo header__app-logo_mobile">
-            <a className="h-100" href="/">
-              <Image src={invertedLogo} alt="OneVet logo" />
-            </a>
+            <Link href="/">
+              <a className="h-100">
+                <Image src={invertedLogo} alt="OneVet logo" />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="col-12 col-md-6 col-lg-5 mb-4">

@@ -1,7 +1,7 @@
 import type { NextPageWithLayout } from "@src/types/NextPageWithLayout"
 
 import { MainLayout } from "@src/layouts/MainLayout"
-import styles from "@styles/index.module.scss"
+import "@styles/index.module.scss"
 
 export const Index: NextPageWithLayout = () => {
   return (

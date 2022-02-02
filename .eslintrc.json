@@ -21,21 +21,16 @@
     "prettier/prettier": "error",
     "no-var": "warn",
     "no-console": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
         "allowExpressions": true,
         "allowTypedFunctionExpressions": true
       }
-    ],
-    "graphql/template-strings": [
-      "error",
-      {
-        "env": "literal"
-      }
-    ],
-    "better-styled-components/sort-declarations-alphabetically": 2
+    ]
   },
   "settings": {
     "import/resolver": {
