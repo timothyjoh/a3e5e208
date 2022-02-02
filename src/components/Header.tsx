@@ -9,7 +9,7 @@ const headerLinks = {
   Locations: "/",
 }
 
-export const Header = () => (
+export const Header: React.FC = () => (
   <div className="header" data-hook="header">
     <div
       className="collapse navbar-collapse header__navbar-collapse d-md-none"
