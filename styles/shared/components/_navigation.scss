@@ -1,0 +1,33 @@
+.nav {
+  .nav-item {
+    &.active .nav-link:not(.disabled)::after,
+    &:hover .nav-link:not(.disabled)::after {
+      height: 2px;
+    }
+
+    .nav-link {
+      position: relative;
+
+      font-weight: $font-weight-medium;
+
+      &:not(.disabled),
+      &:hover {
+        color: $secondary;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: $nav-link-padding-x;
+        left: $nav-link-padding-x;
+        background-color: $primary;
+        transition: 0.15s;
+      }
+    }
+  }
+}
+
+.navbar-nav .nav-link {
+  font-weight: $font-weight-normal;
+}

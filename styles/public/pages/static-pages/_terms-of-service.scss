@@ -1,0 +1,12 @@
+.section {
+  padding-top: $navbar-height;
+
+  @include background-gradient-primary;
+
+  @include media-breakpoint-up(lg) {
+    .row {
+      max-width: $max-content-width-collapsed;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.form-control,
+.custom-select {
+  // Lines below fix chrome autocomplete highlighting bug.
+  // As long as we can't change inputs background on open autocomplete,
+  // We overlap input background color with white inset box shadow
+  &:-webkit-autofill,
+  &:focus:-webkit-autofill {
+    transition: box-shadow 0s;
+    box-shadow: 0 0 0 10rem get-theme-value("yellow", "10") inset !important;
+    -webkit-text-fill-color: get-theme-value("green-dark", "100");
+
+    &::placeholder {
+      -webkit-text-fill-color: get-theme-value("gray", "100");
+    }
+
+    & ~ .input-group-append {
+      transition: box-shadow 0s;
+      box-shadow: 0 0 0 10rem get-theme-value("yellow", "10") inset;
+    }
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    color: rgba($secondary, 0.5);
+    pointer-events: none;
+  }
+
+  &.is-active {
+    border-color: get-theme-value("blue", "100");
+    & ~ .form-group-status {
+      color: get-theme-value("blue", "100");
+    }
+  }
+
+  &.is-invalid {
+    background-color: rgba($danger, 0.2);
+    & ~ .form-group-status {
+      color: $danger;
+    }
+  }
+}
+
+.form-group {
+  .form-group-label {
+    font-weight: $font-weight-medium;
+  }
+  .form-group-status {
+    color: get-theme-value("gray", "100");
+    margin-top: $status-margin-top;
+    font-size: $font-size-1;
+    line-height: $line-height-custom;
+
+    font-family: $font-family-secondary;
+  }
+}
+
+.input-group.input-group-combined {
+  .form-control {
+    border-right: none;
+
+    &:active,
+    &:focus {
+      & ~ .input-group-append {
+        border-color: $input-focus-color;
+      }
+    }
+    &.is-active {
+      & ~ .input-group-append {
+        border-color: get-theme-value("blue", "100");
+      }
+    }
+    &.is-invalid {
+      & ~ .input-group-append {
+        border-color: $danger;
+        background-color: rgba($danger, 0.2);
+      }
+    }
+    &:disabled {
+      & ~ .input-group-append {
+        background-color: $input-disabled-bg;
+        border-color: $input-border-color;
+        .btn {
+          @include button-disabled;
+        }
+      }
+    }
+    &:-webkit-autofill {
+      & ~ .input-group-append {
+        transition: all 0s;
+      }
+    }
+  }
+
+  .input-group-append {
+    border: 1px solid $input-border-color;
+    border-left: none;
+    margin-left: 0;
+
+    @include transition($input-transition);
+    @include border-end-radius($border-radius);
+    .btn {
+      border-radius: $border-radius;
+
+      height: calc(100% - 0.5rem);
+      margin-top: 0.25rem;
+      margin-right: 0.25rem;
+      padding: 0 $btn-padding-x-sm;
+    }
+  }
+
+  &.input-group-sm .input-group-append .btn {
+    height: calc(100% - 0.35rem);
+    margin-top: 0.175rem;
+    margin-right: 0.175rem;
+  }
+
+  &.input-group-lg .input-group-append .btn {
+    height: calc(100% - 0.6rem);
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 0 $btn-padding-x;
+  }
+}
+
+.custom-control .custom-control-label {
+  font-weight: $font-weight-medium;
+  line-height: $line-height-base;
+}
+
+textarea.form-control {
+  min-height: $input-padding-y * 2 + $input-line-height * 3;
+}

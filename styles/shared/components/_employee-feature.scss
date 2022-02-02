@@ -1,0 +1,23 @@
+.employee-feature {
+  .employee-feature__image-container {
+    width: 11.25rem;
+    height: 11.25rem;
+
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    margin-bottom: 1.25rem;
+    background-color: get-theme-value("gray-light", "100");
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .employee-feature__image-container {
+      width: 13.125rem;
+      height: 13.125rem;
+    }
+  }
+}

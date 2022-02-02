@@ -1,0 +1,30 @@
+// Abstracts (imported first)
+@import "../shared/abstracts/_abstracts-dir";
+
+// Vendors overrides
+@import "../shared/vendors-extensions/_vendors-extensions-dir";
+
+// Vendors
+@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap/scss/mixins/_buttons";
+@import "bootstrap/scss/mixins/_gradients";
+@import "bootstrap/scss/mixins/_box-shadow";
+@import "bootstrap/scss/mixins/_transition";
+@import "bootstrap/scss/mixins/_border-radius";
+@import "toastr/toastr";
+
+@at-root {
+  @import "../shared/vendors/fontawesome";
+}
+
+// Base styles and typography
+@import "../shared/base/_base-dir";
+
+// Layout styles
+@import "./layout/_layout-dir";
+
+// Components
+@import "../shared/components/_components-dir";
+
+// Pages styles
+@import "./pages/_pages-dir";

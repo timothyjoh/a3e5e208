@@ -1,0 +1,37 @@
+$graphics-sizes: (
+  "primary": 8.125rem,
+  "secondary": 4.5rem,
+);
+
+$graphics: (
+  "primary": (
+    "clinic": "../../../public/images/public/graphics/primary/clinic.svg",
+    "laptop": "../../../public/images/public/graphics/primary/laptop.svg",
+    "cross": "../../../public/images/public/graphics/primary/cross.svg",
+  ),
+  "secondary": (
+    "award": "../../../public/images/public/graphics/secondary/award.svg",
+    "heart": "../../../public/images/public/graphics/secondary/heart.svg",
+    "location": "../../../public/images/public/graphics/secondary/location.svg",
+    "medal": "../../../public/images/public/graphics/secondary/medal.svg",
+    "space": "../../../public/images/public/graphics/secondary/space.svg",
+  ),
+);
+
+// Classes for including graphics
+//
+// Example:
+// <i class="graphics_primary-clinic"></i>
+
+@each $category-name, $category-value in $graphics {
+  @each $graphics-name, $graphics-value in $category-value {
+    .graphics_#{$category-name}-#{$graphics-name} {
+      display: inline-block;
+      width: map-get($graphics-sizes, $category-name);
+      height: map-get($graphics-sizes, $category-name);
+      flex-shrink: 0;
+      background: url(#{$graphics-value}) no-repeat center center/contain;
+      user-select: none;
+    }
+  }
+}

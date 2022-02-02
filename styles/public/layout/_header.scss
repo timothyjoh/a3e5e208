@@ -1,0 +1,161 @@
+.header {
+  .header__dropdown {
+    &.show .dropdown-toggle {
+      color: $primary;
+    }
+
+    .dropdown-toggle:after {
+      display: none;
+    }
+
+    .dropdown-item {
+      transition: $btn-transition;
+    }
+  }
+
+  .header__navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: 0 $content-padding-mobile;
+    height: $navbar-height;
+
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 $content-padding-desktop;
+    }
+  }
+
+  .header__container {
+    position: relative;
+
+    // Animal image positioning
+    &:after {
+      content: "";
+      position: absolute;
+      background: url("../../../public/images/public/illustrations/black-cat.png") no-repeat;
+      background-size: contain;
+      transform: rotate(-165deg);
+
+      height: 7rem;
+      width: 7.5rem;
+      top: -3.5rem;
+      left: 5rem;
+
+      @include media-breakpoint-up(md) {
+        height: 9rem;
+        width: 9.5rem;
+        top: -7.5rem;
+        left: 8rem;
+      }
+      @include media-breakpoint-up(lg) {
+        top: -4rem;
+        left: 13rem;
+      }
+      @include media-breakpoint-up(xl) {
+        left: 18rem;
+      }
+    }
+  }
+
+  .header__app-logo_mobile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  .header__navbar-collapse {
+    z-index: 3;
+
+    &.show,
+    &.collapsing {
+      position: fixed;
+      top: $navbar-height;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      overflow-y: scroll;
+    }
+
+    &.collapsing {
+      overflow-y: hidden;
+    }
+
+    .navbar-collapse__nav {
+      min-height: calc(100vh - #{$navbar-height});
+      padding-bottom: 12rem;
+
+      // Animal image positioning
+      background-image: url("../../../public/images/public/illustrations/doodle.png"),
+        url("../../../public/images/public/illustrations/bulldog.png"),
+        url("../../../public/images/public/illustrations/bowing-cat.png"),
+        url("../../../public/images/public/illustrations/dachshund.png");
+      background-color: $secondary;
+      background-repeat: no-repeat;
+
+      background-size: auto 12rem, auto 13rem, auto 7rem, auto 6.5rem;
+      background-position: calc(100% + 2.5rem) calc(100% + 2rem), -2.5rem calc(100% + 1rem),
+        calc(100% + 3rem) 2.5rem, -10rem 1.5rem;
+
+      @include media-breakpoint-up(sm) {
+        background-size: auto 13rem, auto 14rem, auto 9rem, auto 8rem;
+      }
+    }
+
+    .navbar-collapse__accordion {
+      max-width: 340px;
+
+      .accordion__collapse {
+        color: $primary;
+
+        &.collapsed {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .header__navbar-toggler .navbar-toggler__times {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.header_open {
+      .header__navbar {
+        position: fixed;
+        background-color: $secondary;
+      }
+
+      .header__navbar-toggler {
+        .navbar-toggler__bars {
+          display: none;
+        }
+        .navbar-toggler__times {
+          display: inline;
+        }
+      }
+
+      .header__app-logo {
+        display: none;
+
+        &.header__app-logo_mobile {
+          display: block;
+        }
+      }
+
+      .header__container:after {
+        top: -3.5rem;
+        left: -3rem;
+
+        @include media-breakpoint-up(sm) {
+          left: 5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "sass-recursive-map-merge/recursive-map-merge";
+
+$theme: () !default;
+
+$theme: recursive-map-merge(
+  (
+    // Theme colors
+    "white":
+      (
+        "100": #ffffff,
+      ),
+    "green-dark": (
+      "100": #034752,
+      "85": #29636c,
+      "80": #5e8990,
+      "60": #689197,
+    ),
+    "green": (
+      "100": #048b76,
+    ),
+    "green-light": (
+      "100": #66d5b7,
+    ),
+    "gold": (
+      "100": #bb9a3b,
+    ),
+    "yellow": (
+      "100": #ffae05,
+      "70": #ffc659,
+      "20": #fff4de,
+      "10": #fefaf0,
+    ),
+    "orange": (
+      "100": #ee895d,
+      "60": #f5b89e,
+    ),
+    "red": (
+      "100": #f24d38,
+      "20": #fcdfdc,
+    ),
+    "blue": (
+      "100": #2789c6,
+    ),
+    "blue-light": (
+      "100": #08b1cd,
+      "30": #b5e8f0,
+      "10": #e6f7fa,
+    ),
+    // Gray colors
+    "gray-dark":
+      (
+        "100": #808e91,
+        "80": #9aa4a7,
+      ),
+    "gray": (
+      "100": #cfd9db,
+      "80": #d9e1e2,
+    ),
+    "gray-light": (
+      "100": #e6edee,
+      "50": #f3f6f7,
+      "30": #f7fafa,
+    )
+  ),
+  $theme
+);
+
+// Function to get some theme value from $theme
+@function get-theme-value($category, $name) {
+  @return map-get(map-get($theme, $category), $name);
+}

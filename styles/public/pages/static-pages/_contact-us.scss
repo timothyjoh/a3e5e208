@@ -1,0 +1,218 @@
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .row__btn {
+    margin: 0 auto;
+    max-width: 14rem;
+  }
+
+  .heading__row,
+  .content__row {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .section__label {
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .section__subheader {
+    margin-bottom: 1.25rem;
+    text-transform: capitalize;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .section__header-info {
+    margin-bottom: 2rem;
+  }
+
+  &.heading-section {
+    @include background-gradient-primary(0.2, 0);
+    padding-top: $navbar-height;
+
+    .heading-section__link {
+      font-size: $font-size-6;
+      text-decoration: none;
+    }
+
+    .heading-section__icon {
+      font-size: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .accordion__toggle-btn {
+      border-left: none;
+      border-right: none;
+
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 0 1rem;
+
+      text-align: left;
+
+      &:not(.collapsed) .toggle-btn__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    .toggle-btn__icon {
+      transition: 0.3s;
+      font-size: 1.25rem;
+    }
+
+    .heading-section__accordion {
+      width: 100%;
+      max-width: 33.75rem;
+      margin: 0 auto;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-top: calc(#{$navbar-height} + 2rem);
+
+      .section__header-info {
+        max-width: 34rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .section__header-info {
+        max-width: 43rem;
+      }
+
+      .toggle-btn__icon {
+        font-size: 1.375rem;
+      }
+    }
+
+    // Handle animals positioning
+    &:after,
+    &:before {
+      content: "";
+      background-repeat: no-repeat;
+      pointer-events: none;
+
+      position: absolute;
+      top: 0;
+      bottom: -8rem;
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      background-image: url("../../../../public/images/public/illustrations/boxer.png");
+      background-position: calc(100% + 5rem) calc(100% - 4rem);
+      background-size: auto 8rem;
+
+      @include media-breakpoint-up(sm) {
+        background-size: auto 10rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        background-size: auto 12rem;
+      }
+      @include media-breakpoint-up(lg) {
+        background-position: calc(100% + 3rem) 100%;
+        background-size: auto 15rem;
+      }
+    }
+
+    &:before {
+      background-image: url("../../../../public/images/public/illustrations/bowing-cat.png");
+
+      background-position: calc(100% + 3rem) calc(100% - 4.5rem);
+      background-size: auto 8rem;
+
+      transform: scaleX(-1);
+
+      @include media-breakpoint-up(sm) {
+        background-position: calc(100% + 3.5rem) calc(100% - 3.5rem);
+        background-size: auto 10rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        background-position: calc(100% + 3.5rem) calc(100% - 2rem);
+        background-size: auto 14rem;
+      }
+      @include media-breakpoint-up(lg) {
+        background-position: calc(100% + 2.5rem) 100%;
+        background-size: auto 18rem;
+      }
+    }
+  }
+
+  &.careers-section {
+    .section__subheader {
+      max-width: 18rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .section__subheader {
+        max-width: 27rem;
+      }
+      .section__header-info {
+        max-width: 24rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .section__subheader {
+        max-width: 100%;
+      }
+      .section__header-info {
+        max-width: 30rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 6rem;
+    }
+  }
+
+  &.partnerships-section {
+    background: get-theme-value("yellow", "10");
+
+    padding-bottom: 0;
+
+    .section__subheader {
+      max-width: 15rem;
+    }
+    .section__header-info {
+      max-width: 24rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .section__subheader {
+        max-width: 100%;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .section__header-info {
+        max-width: 30rem;
+      }
+    }
+  }
+  &.placeholder-section {
+    @include background-gradient-secondary(0.5, 0);
+
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,262 @@
+.card {
+  &.with-shadow {
+    box-shadow: $box-shadow-lg;
+  }
+
+  .card-header-text {
+    font-size: $font-size-5;
+    font-weight: $font-weight-semibold;
+  }
+
+  .card-text-primary {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-3;
+  }
+  .card-text-secondary {
+    font-family: $font-family-secondary;
+    font-size: $font-size-1;
+    opacity: 0.8;
+  }
+
+  .card-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .card-position-right {
+    position: absolute;
+    right: $card-spacer-x;
+  }
+
+  .issues-map {
+    position: relative;
+    background: url("../../../public/images/public/illustrations/great-dane.png") no-repeat center center;
+    width: 16rem;
+    height: 17rem;
+    background-size: 12.5rem auto;
+
+    .issue-btn {
+      position: absolute;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background-color: get-theme-value("gray-light", "100");
+      }
+
+      &#eyes {
+        top: 0;
+        left: 0;
+        &::after {
+          bottom: -1.4rem;
+          right: -0.3rem;
+          transform: rotate(60deg);
+          width: 1.5rem;
+        }
+      }
+      &#ears {
+        top: 0;
+        left: 7rem;
+        &::after {
+          bottom: -1rem;
+          left: -2rem;
+          transform: rotate(-40deg);
+          width: 1.5rem;
+        }
+      }
+      &#skin {
+        top: 0;
+        right: 0;
+        &::after {
+          bottom: -2rem;
+          left: -5.7rem;
+          transform: rotate(-40deg);
+          width: 5.8rem;
+        }
+      }
+      &#vomiting {
+        left: 0;
+        top: 10rem;
+        &::after {
+          top: -2.1rem;
+          left: 0.3rem;
+          transform: rotate(-75deg);
+          width: 3rem;
+        }
+      }
+      &#diarrhea {
+        top: 3.5rem;
+        right: 0;
+        &::after {
+          bottom: -1.3rem;
+          left: 1.3rem;
+          transform: rotate(-55deg);
+          width: 2rem;
+        }
+      }
+
+      &#other {
+        left: 0;
+        bottom: 0;
+      }
+
+      &#behavior {
+        bottom: 0;
+        left: 6rem;
+      }
+      &#urine {
+        bottom: 0;
+        right: 0;
+        &::after {
+          top: -1.7rem;
+          left: -0.5rem;
+          transform: rotate(55deg);
+          width: 3rem;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 20rem;
+      width: 25rem;
+      background-size: 17.5rem auto;
+      .issue-btn {
+        &#eyes {
+          top: 0;
+          left: 0;
+          &::after {
+            bottom: -1.2rem;
+            right: -2.5rem;
+            transform: rotate(45deg);
+            width: 2.5rem;
+          }
+        }
+        &#ears {
+          top: 0;
+          left: 11rem;
+          &::after {
+            bottom: -0.7rem;
+            left: -2.8rem;
+            transform: rotate(-20deg);
+            width: 2.5rem;
+          }
+        }
+        &#skin {
+          top: 0;
+          right: 0;
+          &::after {
+            bottom: -2.3rem;
+            left: -6rem;
+            transform: rotate(-40deg);
+            width: 6.2rem;
+          }
+        }
+        &#vomiting {
+          top: 8rem;
+          left: 0;
+          &::after {
+            top: -1.2rem;
+            left: 2.3rem;
+            transform: rotate(-45deg);
+            width: 1.8rem;
+          }
+        }
+        &#diarrhea {
+          top: 4rem;
+          right: 0;
+          &::after {
+            bottom: -1.5rem;
+            left: -1rem;
+            transform: rotate(-40deg);
+            width: 3rem;
+          }
+        }
+        &#other {
+          left: 0;
+          bottom: 0;
+        }
+        &#behavior {
+          bottom: 0;
+          left: 10rem;
+        }
+        &#urine {
+          bottom: 0;
+          right: 0;
+          &::after {
+            top: -1.5rem;
+            left: -2.5rem;
+            transform: rotate(45deg);
+            width: 3rem;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 30rem;
+      height: 25rem;
+      background-size: 22rem auto;
+      .issue-btn {
+        &#eyes {
+          &::after {
+            bottom: -1.8rem;
+            right: -3.3rem;
+            transform: rotate(40deg);
+            width: 3.5rem;
+          }
+        }
+        &#ears {
+          top: 0;
+          left: 13rem;
+          &::after {
+            bottom: -1rem;
+            left: -3.3rem;
+            transform: rotate(-30deg);
+            width: 3rem;
+          }
+        }
+        &#skin {
+          &::after {
+            bottom: -3rem;
+            left: -7.7rem;
+            transform: rotate(-40deg);
+            width: 8rem;
+          }
+        }
+        &#vomiting {
+          top: 12rem;
+          &::after {
+            top: -2.3rem;
+            left: 1.6rem;
+            transform: rotate(-60deg);
+            width: 3.5rem;
+          }
+        }
+        &#diarrhea {
+          top: 5.5rem;
+          &::after {
+            bottom: -2rem;
+            left: -1.5rem;
+            transform: rotate(-45deg);
+            width: 4rem;
+          }
+        }
+
+        &#behavior {
+          left: 12rem;
+        }
+        &#urine {
+          &::after {
+            top: -1.8rem;
+            left: -3.8rem;
+            transform: rotate(45deg);
+            width: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

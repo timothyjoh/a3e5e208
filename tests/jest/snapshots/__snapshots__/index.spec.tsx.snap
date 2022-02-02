@@ -3,218 +3,854 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="container"
+    class="header"
+    data-hook="header"
   >
-    <main
-      class="main"
+    <div
+      class="collapse navbar-collapse header__navbar-collapse d-md-none"
+      data-hook="navbar-collapse"
+      id="navbar-collapse"
     >
-      <h1
-        class="title"
+      <ul
+        class="nav flex-column align-items-center navbar-collapse__nav"
       >
-        Welcome to 
-        <a
-          href="https://nextjs.org"
+        <li
+          class="nav-item mb-3"
         >
-          Next.js!
-        </a>
-      </h1>
-      <p
-        class="description"
-      >
-        Get started by editing
-         
-        <code
-          class="code"
+          <a
+            class="nav-link text-white-100 h4"
+            href="/"
+          >
+            Services
+          </a>
+        </li>
+        <li
+          class="nav-item mb-3"
         >
-          pages/index.tsx
-        </code>
-      </p>
-      <button
-        class="btn btn-primary m-3"
-      >
-        Bootstrap Button Primary
-      </button>
+          <a
+            class="nav-link text-white-100 h4"
+            href="/"
+          >
+            About Us
+          </a>
+        </li>
+        <li
+          class="nav-item mb-3"
+        >
+          <a
+            class="nav-link text-white-100 h4"
+            href="/"
+          >
+            Locations
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-white-100 h4"
+            href="/"
+          >
+            Log in
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav
+      class="navbar navbar-expand-md header__navbar"
+    >
       <div
-        class="dropdown m-3"
+        class="container-xl h-100 header__container"
       >
+        <div
+          class="app-logo app-logo_size-md"
+        >
+          <a
+            class="h-100"
+            href="/"
+          >
+            Next image stub
+          </a>
+        </div>
+        <div
+          class="app-logo app-logo_size-md header__app-logo header__app-logo_mobile"
+        >
+          <a
+            class="h-100"
+            href="/"
+          >
+            Next image stub
+          </a>
+        </div>
+        <div
+          class="d-none d-md-flex ml-auto"
+        >
+          <ul
+            class="nav align-items-center"
+          >
+            <li
+              class="nav-item "
+            >
+              <a
+                class="nav-link"
+                href="/"
+              >
+                Services
+              </a>
+            </li>
+            <li
+              class="nav-item "
+            >
+              <a
+                class="nav-link"
+                href="/"
+              >
+                About Us
+              </a>
+            </li>
+            <li
+              class="nav-item "
+            >
+              <a
+                class="nav-link"
+                href="/"
+              >
+                Locations
+              </a>
+            </li>
+          </ul>
+          <a
+            class="btn btn-light px-5 ml-3"
+            href="/"
+          >
+            Log in
+          </a>
+        </div>
         <button
+          aria-controls="navbar-collapse"
           aria-expanded="false"
-          class="btn btn-secondary dropdown-toggle"
-          data-bs-toggle="dropdown"
-          id="dropdownMenuButton1"
+          aria-label="Toggle navigation"
+          class="navbar-toggler header__navbar-toggler ml-auto collapsed p-2 mr-n2"
+          data-hook="navbar-toggler"
+          data-target="#navbar-collapse"
+          data-toggle="collapse"
           type="button"
         >
-          Bootstrap Dropdown
+          <i
+            class="fal fa-bars fa-lg text-secondary navbar-toggler__bars"
+          />
+          <i
+            class="fal fa-times fa-2x text-white-100 navbar-toggler__times"
+          />
         </button>
-        <ul
-          aria-labelledby="dropdownMenuButton1"
-          class="dropdown-menu"
-        >
-          <li>
-            <a
-              class="dropdown-item"
-              href="#"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              class="dropdown-item"
-              href="#"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              class="dropdown-item"
-              href="#"
-            >
-              Option 3
-            </a>
-          </li>
-        </ul>
       </div>
-      <div
-        class="accordion"
-      >
-        <div
-          class="accordion-item"
-        >
-          <h2
-            class="accordion-header"
-          >
-            <button
-              aria-expanded="true"
-              class="accordion-button"
-              type="button"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            class="accordion-collapse collapse show"
-          >
-            <div
-              class="accordion-body"
-            >
-              Lorem ipsum dolor sit amet...
-            </div>
-          </div>
-        </div>
-        <div
-          class="accordion-item"
-        >
-          <h2
-            class="accordion-header"
-          >
-            <button
-              aria-expanded="false"
-              class="accordion-button collapsed"
-              type="button"
-            >
-              Accordion Item #2
-            </button>
-          </h2>
-          <div
-            class="accordion-collapse collapse"
-          >
-            <div
-              class="accordion-body"
-            >
-              Duis aute irure dolor in reprehenderit in voluptate...
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="grid"
-      >
-        <a
-          class="card"
-          href="https://nextjs.org/docs"
-        >
-          <h2>
-            Documentation →
-          </h2>
-          <p>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://nextjs.org/learn"
-        >
-          <h2>
-            Learn →
-          </h2>
-          <p>
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://github.com/vercel/next.js/tree/canary/examples"
-        >
-          <h2>
-            Examples →
-          </h2>
-          <p>
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        >
-          <h2>
-            Deploy →
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-    <footer
-      class="footer"
-    >
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by
-         
-        <span
-          class="logo"
-        >
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 version=%271.1%27 width=%2772%27 height=%2716%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Vercel Logo"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-            <noscript />
-          </span>
-        </span>
-      </a>
-    </footer>
+    </nav>
   </div>
+  <div
+    id="homepage"
+  >
+    <div
+      class="container-fluid section heading-section"
+    >
+      <div
+        class="row no-gutters heading__row mb-3"
+      >
+        <h1
+          class="responsive-font section__header"
+        >
+          A New Breed of Pet Care
+        </h1>
+        <p
+          class="sub-headline responsive-font section__sub-headline responsive-font"
+        >
+          Whenever you need it. In person, online, on the fly.
+        </p>
+        <p
+          class="body-1 responsive-font section__header-info"
+        >
+          Our expert caregivers and technology provide personalized veterinary care designed around how you and your pet live today.
+        </p>
+      </div>
+      <div
+        class="content__row text-center"
+      >
+        <button
+          class="btn btn-primary px-5"
+          data-target="#location--book-now-modal"
+          data-toggle="modal"
+        >
+          Book Now
+        </button>
+      </div>
+      <div
+        class="container-xl h-100"
+      >
+        <div
+          class="card card_main h-100"
+        >
+          <div
+            class="row no-gutters h-100"
+          >
+            <div
+              class="col-12 col-lg-6 col-xl-7"
+            >
+              <div
+                class="card__img-container"
+              />
+            </div>
+            <div
+              class="col-12 col-lg-6 col-xl-5"
+            >
+              <div
+                class="card-body"
+              >
+                <h3
+                  class="mb-3 text-center text-lg-left responsive-font"
+                >
+                  Open 7 Days a Week
+                </h3>
+                <h4
+                  class="mb-3 text-center text-lg-left responsive-font"
+                >
+                  Routine & Urgent Care
+                </h4>
+                <p
+                  class="body-1 text-gray-dark-100 mb-4 text-center text-lg-left"
+                >
+                  Mon – Fri: 8am – 6pm 
+                  <br />
+                  Sat – Sun: 9am – 5pm
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid section services-section"
+    >
+      <div
+        class="row no-gutters heading__row text-center"
+      >
+        <div
+          class="col-12"
+        >
+          <h2
+            class="responsive-font section__subheader"
+          >
+            One Vet Services
+          </h2>
+          <p
+            class="body-1 responsive-font section__header-info"
+          >
+            We want pet parenthood to be as easy as a walk in the park
+          </p>
+        </div>
+      </div>
+      <div
+        class="row no-gutters content__row"
+      >
+        <div
+          class="col-12 col-md-7 col-lg-4 section-card services-section__section-card order-3"
+        >
+          <div
+            class="row no-gutters section-card__row"
+          >
+            <div
+              class="col-12"
+            >
+              <i
+                class="graphics_primary-cross"
+              />
+              <h4
+                class="responsive-font homepage__h4 section-card__header"
+              >
+                Instant Care
+              </h4>
+              <p
+                class="body-1 responsive-font section-card__text"
+              >
+                Fast, immediate care and support for all the curveballs life throws at your pet.
+              </p>
+            </div>
+            <div
+              class="col-9 col-sm-8 col-md-7 col-lg-10 section-card__btns-block"
+            >
+              <p
+                class="body-1 text-muted"
+              >
+                Coming Soon
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-7 col-lg-4 section-card services-section__section-card order-1"
+        >
+          <div
+            class="row no-gutters section-card__row"
+          >
+            <div
+              class="col-12"
+            >
+              <i
+                class="graphics_primary-clinic"
+              />
+              <h4
+                class="responsive-font homepage__h4 section-card__header "
+              >
+                In-Person Care
+              </h4>
+              <p
+                class="body-1 responsive-font section-card__text"
+              >
+                Our Pet Care Centers and care teams offer convenient hours, online scheduling and transparent pricing.
+              </p>
+            </div>
+            <div
+              class="col-9 col-sm-8 col-md-7 col-lg-10 section-card__btns-block"
+            >
+              <p
+                class="body-1 text-muted"
+              >
+                Coming Soon
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-7 col-lg-4 section-card services-section__section-card order-2"
+        >
+          <div
+            class="row no-gutters section-card__row"
+          >
+            <div
+              class="col-12"
+            >
+              <i
+                class="graphics_primary-laptop"
+              />
+              <h4
+                class="responsive-font homepage__h4 section-card__header"
+              >
+                Virtual Care
+              </h4>
+              <p
+                class="body-1 responsive-font section-card__text"
+              >
+                Access your expert medical team from anywhere. A trusted veterinarian is just a video call away.
+              </p>
+            </div>
+            <div
+              class="col-9 col-sm-8 col-md-7 col-lg-10 section-card__btns-block"
+            >
+              <p
+                class="body-1 text-muted"
+              >
+                Coming Soon
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid section pet-care-section"
+    >
+      <div
+        class="row no-gutters heading__row"
+      >
+        <h2
+          class="responsive-font section__subheader "
+        >
+          Pet Care: The Way It Should Be
+        </h2>
+      </div>
+      <div
+        class="row no-gutters content__row"
+      >
+        <div
+          class="col-12 col-md-6 col-lg-4 section-card pet-care-section__section-card"
+        >
+          <i
+            class="graphics_secondary-medal"
+          />
+          <h4
+            class="responsive-font homepage__h4 section-card__header"
+          >
+            Expert Medical Care
+          </h4>
+          <p
+            class="body-1 responsive-font section-card__text"
+          >
+            Medical expertise combined with technology that is designed to create a care experience unlike any other.
+          </p>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-4 section-card pet-care-section__section-card"
+        >
+          <i
+            class="graphics_secondary-space"
+          />
+          <h4
+            class="responsive-font homepage__h4 section-card__header"
+          >
+            Happy Spaces & Places
+          </h4>
+          <p
+            class="body-1 responsive-font section-card__text"
+          >
+            Beautifully designed, calming spaces. Wait less. See your veterinarian more at convenient hours.
+          </p>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-4 section-card pet-care-section__section-card"
+        >
+          <i
+            class="graphics_secondary-location"
+          />
+          <h4
+            class="responsive-font homepage__h4 section-card__header"
+          >
+            When & Where You Need Us
+          </h4>
+          <p
+            class="body-1 responsive-font section-card__text"
+          >
+            Pet care powered by technology. Your care team is available 24/7. We keep you in the know at every step.
+          </p>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-4 section-card pet-care-section__section-card"
+        >
+          <i
+            class="graphics_secondary-award"
+          />
+          <h4
+            class="responsive-font homepage__h4 section-card__header"
+          >
+            Your One Team
+          </h4>
+          <p
+            class="body-1 responsive-font section-card__text"
+          >
+            We became veterinarians to help pets. Then we built One Vet to do it better. Transforming pet care by designing it around you.
+          </p>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-4 section-card pet-care-section__section-card"
+        >
+          <i
+            class="graphics_secondary-heart"
+          />
+          <h4
+            class="responsive-font homepage__h4 section-card__header"
+          >
+            Part of the Family
+          </h4>
+          <p
+            class="body-1 responsive-font section-card__text"
+          >
+            The One Vet care team takes the time to get to know you. We incorporate best-in-class clinical thinking with a thoughtful, personalized approach.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid section membership-section"
+      id="one-plus"
+    >
+      <div
+        class="row no-gutters heading__row"
+      >
+        <div
+          class="col-12"
+        >
+          <h2
+            class="responsive-font section__subheader mb-2"
+          >
+            Want all the Purrrks?
+          </h2>
+          <h2
+            class="responsive-font section__subheader position-relative"
+          >
+            <div
+              class="membership"
+            >
+              onePlus
+            </div>
+             is where it’s at
+            <span
+              class="membership-section__offer-badge bg-gold-100"
+            >
+              $500 in
+              <br />
+              total value
+            </span>
+          </h2>
+          <p
+            class="body-1 responsive-font section__header-info"
+          >
+            Unleash our benefits at just $195/year
+          </p>
+        </div>
+        <div
+          class="col-8 col-md-4 mt-3"
+        >
+          <button
+            class="btn btn-primary px-5"
+            data-target="#one-plus-membership-modal"
+            data-toggle="modal"
+          >
+            Join Now
+          </button>
+        </div>
+      </div>
+      <div
+        class="row no-gutters content__row"
+      >
+        <div
+          class="col-12"
+        >
+          <ul
+            class="membership-section__list"
+          >
+            <li
+              class="list-item"
+            >
+              <div
+                class="list-item__icon-block"
+              >
+                <div
+                  class="rounded-circle bg-green-dark-100 d-flex align-items-center justify-content-center list-item__icon"
+                >
+                  <i
+                    class="far fa-check fa-sm text-white-100"
+                  />
+                </div>
+              </div>
+              <div
+                class="list-item__text-block"
+              >
+                <h4
+                  class="responsive-font homepage__h4 text-block__header mb-0"
+                >
+                  1 Annual Preventative Diagnostics Package
+                   
+                  <span
+                    class="body-1 text-green-dark-85"
+                  >
+                    ($335 value)
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li
+              class="list-item"
+            >
+              <div
+                class="list-item__icon-block"
+              >
+                <div
+                  class="rounded-circle bg-green-dark-100 d-flex align-items-center justify-content-center list-item__icon"
+                >
+                  <i
+                    class="far fa-check fa-sm text-white-100"
+                  />
+                </div>
+              </div>
+              <div
+                class="list-item__text-block item__text-block"
+              >
+                <h4
+                  class="responsive-font homepage__h4 text-block__header mb-0"
+                >
+                  1 Annual In-Person Exam
+                   
+                  <span
+                    class="body-1 text-green-dark-85"
+                  >
+                    ($65 value)
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li
+              class="list-item"
+            >
+              <div
+                class="list-item__icon-block"
+              >
+                <div
+                  class="rounded-circle bg-green-dark-100 d-flex align-items-center justify-content-center list-item__icon"
+                >
+                  <i
+                    class="far fa-check fa-sm text-white-100"
+                  />
+                </div>
+              </div>
+              <div
+                class="list-item__text-block item__text-block"
+              >
+                <h4
+                  class="responsive-font homepage__h4 text-block__header mb-0"
+                >
+                  2 15-Minute Virtual Care Visits
+                   
+                  <span
+                    class="body-1 text-green-dark-85"
+                  >
+                    ($60 total value)
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li
+              class="list-item"
+            >
+              <div
+                class="list-item__icon-block"
+              >
+                <div
+                  class="rounded-circle bg-green-dark-100 d-flex align-items-center justify-content-center list-item__icon"
+                >
+                  <i
+                    class="far fa-check fa-sm text-white-100"
+                  />
+                </div>
+              </div>
+              <div
+                class="list-item__text-block item__text-block"
+              >
+                <h4
+                  class="responsive-font homepage__h4 text-block__header mb-0"
+                >
+                  1 One Vet Welcome Swag Package
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid section quotes-section"
+    >
+      <div
+        class="carousel slide"
+        data-interval="0"
+        data-ride="carousel"
+        id="carouselExampleControls"
+      >
+        <div
+          class="carousel-inner"
+        >
+          <div
+            class="carousel-item active"
+          >
+            <div
+              class="carousel-item__content"
+            >
+              <blockquote
+                class="blockquote text-center"
+              >
+                <p
+                  class="label responsive-font"
+                >
+                  Word around the park
+                </p>
+                <p
+                  class="body-1 responsive-font carousel__text pb-4 mb-0"
+                >
+                  “Some people talk to animals. Not many listen though. That’s the problem.”
+                </p>
+                <footer
+                  class="blockquote-footer"
+                >
+                  A.A. Milne
+                </footer>
+              </blockquote>
+              <div
+                class="carousel-item__rating"
+              >
+                <i
+                  class="fas fa-star text-gold-100"
+                />
+                <i
+                  class="fas fa-star text-gold-100"
+                />
+                <i
+                  class="fas fa-star text-gold-100"
+                />
+                <i
+                  class="fas fa-star text-gold-100"
+                />
+                <i
+                  class="fas fa-star text-gold-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="btn carousel-btn carousel-btn-prev d-none"
+          data-slide="prev"
+          href="#carouselExampleControls"
+          role="button"
+        >
+          <i
+            class="fal fa-chevron-left"
+          />
+        </a>
+        <a
+          class="btn carousel-btn carousel-btn-next d-none"
+          data-slide="next"
+          href="#carouselExampleControls"
+          role="button"
+        >
+          <i
+            class="fal fa-chevron-right"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer
+    class="footer bg-green-dark-100"
+  >
+    <div
+      class="container-xl"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-12 col-lg-3 mb-4"
+        >
+          <div
+            class="app-logo app-logo_size-md header__app-logo header__app-logo_mobile"
+          >
+            <a
+              class="h-100"
+              href="/"
+            >
+              Next image stub
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-5 mb-4"
+        >
+          <ul
+            class="row no-gutters list-unstyled mb-0"
+          >
+            <li
+              class="col-6 mb-2 mb-md-3"
+            >
+              <a
+                class="text-decoration-none footer__link"
+                href="/"
+              >
+                About Us
+              </a>
+            </li>
+            <li
+              class="col-6 mb-2 mb-md-3"
+            >
+              <a
+                class="text-decoration-none footer__link"
+                href="/"
+              >
+                Terms of Service
+              </a>
+            </li>
+            <li
+              class="col-6 mb-2 mb-md-3"
+            >
+              <a
+                class="text-decoration-none footer__link"
+                href="/"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li
+              class="col-6 mb-2 mb-md-3"
+            >
+              <a
+                class="text-decoration-none footer__link"
+                href="/"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li
+              class="col-6"
+            >
+              <a
+                class="text-decoration-none footer__link"
+                href="/"
+              >
+                Careers
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-12 col-sm-7 col-md-6 col-lg-4 col-xl-3 offset-xl-1"
+        >
+          <ul
+            class="list-unstyled mb-3"
+          >
+            <li
+              class="d-inline-block mr-2"
+            >
+              <a
+                class="footer__social-link"
+                href="/"
+                target="_blank"
+              >
+                <i
+                  class="fab fa-facebook-f"
+                />
+              </a>
+            </li>
+            <li
+              class="d-inline-block mr-2"
+            >
+              <a
+                class="footer__social-link"
+                href="/"
+                target="_blank"
+              >
+                <i
+                  class="fab fa-instagram"
+                />
+              </a>
+            </li>
+            <li
+              class="d-inline-block"
+            >
+              <a
+                class="footer__social-link"
+                href="/"
+                target="_blank"
+              >
+                <i
+                  class="fab fa-linkedin"
+                />
+              </a>
+            </li>
+          </ul>
+          <p
+            class="text-white-100 accent-2 mb-0"
+          >
+            © Copyright One Vet Inc 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

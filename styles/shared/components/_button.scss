@@ -1,0 +1,73 @@
+.btn {
+  &.btn-primary {
+    color: get-theme-value("white", "100") !important;
+  }
+
+  &.btn-tertiary {
+    @include button-variant(
+      get-theme-value("gray-light", "100"),
+      get-theme-value("gray-light", "100"),
+      get-theme-value("gray", "80"),
+      get-theme-value("gray", "80"),
+      get-theme-value("gray", "100"),
+      get-theme-value("gray", "100")
+    );
+
+    color: get-theme-value("green-dark", "100") !important;
+  }
+
+  &.btn-success {
+    color: get-theme-value("white", "100") !important;
+  }
+
+  &.btn-light {
+    @include button-variant(get-theme-value("white", "100"), get-theme-value("gray-light", "100"));
+
+    color: get-theme-value("green-dark", "100") !important;
+  }
+
+  &.btn-outline-primary {
+    @include button-outline-variant(
+      get-theme-value("orange", "100"),
+      get-theme-value("white", "100")
+    );
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: get-theme-value("white", "100");
+    }
+  }
+
+  &.btn-outline-success {
+    @include button-outline-variant(
+      get-theme-value("green-light", "100"),
+      get-theme-value("white", "100")
+    );
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: get-theme-value("white", "100");
+    }
+  }
+
+  &.btn-link {
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+  }
+
+  &:disabled:not(.btn-link),
+  &.disabled:not(.btn-link) {
+    @include button-disabled;
+  }
+
+  &.is-loading {
+    @include button-disabled;
+    position: relative;
+
+    &::after {
+      @include with-spinner(1.75rem);
+      position: absolute;
+      content: "";
+    }
+  }
+}

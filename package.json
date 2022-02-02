@@ -26,9 +26,12 @@
     "react-hook-form": "^7.25.1",
     "react-use": "^17.3.2",
     "remeda": "^0.0.32",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "sass-recursive-map-merge": "^1.0.1",
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
     "@next/eslint-plugin-next": "^12.0.9",
     "@playwright/test": "^1.18.0",
     "@testing-library/jest-dom": "^5.16.1",
@@ -52,6 +55,8 @@
     "jest": "^27.4.7",
     "lint-staged": "^12.3.2",
     "postcss": "^8.4.5",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^7.2.3",
     "prettier": "^2.5.1",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0",

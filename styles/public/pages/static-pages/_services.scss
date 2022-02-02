@@ -1,0 +1,376 @@
+.section {
+  &.heading-section {
+    .heading__row,
+    .content__row {
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .section__text-content {
+      text-align: center;
+    }
+  }
+
+  .row__btn {
+    margin: 0 auto;
+    max-width: 15rem;
+  }
+
+  &.heading-section {
+    @include background-gradient-primary(0, 0.3);
+    padding-top: calc(#{$navbar-height} + 4rem);
+    padding-bottom: 3rem;
+
+    .heading__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section__header {
+      margin-bottom: 1.5rem;
+      max-width: 15rem;
+    }
+
+    .section__header-info {
+      max-width: 14rem;
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-top: calc(#{$navbar-height} + 2rem);
+      padding-bottom: 2.5rem;
+
+      .section__header {
+        max-width: 100%;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: calc(#{$navbar-height} + 6rem);
+      background: linear-gradient(
+        180deg,
+        rgba(get-theme-value("yellow", "10"), 0.75) 0%,
+        rgba(get-theme-value("yellow", "10"), 0.5) 100%
+      );
+
+      .section__header-info {
+        max-width: 22rem;
+      }
+    }
+
+    .animal-img {
+      &.animal-img1 {
+        height: 12rem;
+        top: 6.5rem;
+        right: -4.5rem;
+      }
+
+      &.animal-img2 {
+        height: 6.5rem;
+        top: 9rem;
+        left: -10rem;
+      }
+
+      &.animal-img4 {
+        display: none;
+      }
+
+      @include media-breakpoint-up(sm) {
+        &.animal-img2 {
+          height: 8rem;
+          left: -11rem;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        &.animal-img1 {
+          height: 17rem;
+          top: 7rem;
+          right: -7rem;
+        }
+
+        &.animal-img2 {
+          display: none;
+        }
+
+        &.animal-img4 {
+          display: block;
+          height: 12rem;
+          top: 11rem;
+          left: 1rem;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        &.animal-img1 {
+          height: 22rem;
+          top: 10rem;
+          right: -7rem;
+        }
+
+        &.animal-img4 {
+          height: 15rem;
+          top: 14rem;
+          left: 1rem;
+        }
+      }
+    }
+  }
+
+  &.services-section {
+    @include background-gradient-secondary;
+
+    padding: 1.25rem 0 3rem;
+
+    .content__row {
+      justify-content: center;
+      max-width: calc(33.75rem + 2 * #{$content-padding-mobile});
+      margin: 0 auto;
+    }
+
+    .accordion {
+      width: 100%;
+      margin-bottom: 0;
+      .accordion__item {
+        .item__header {
+          text-align: left;
+          padding: 1.25rem $content-padding-mobile 1.5rem;
+          &:after {
+            left: $content-padding-mobile;
+            right: $content-padding-mobile;
+            background-color: rgba(get-theme-value("green-dark", "100"), 0.15);
+          }
+          &.collapsed .item__icon {
+            transform: rotate(45deg);
+          }
+        }
+
+        .item__title {
+          padding-right: 1rem;
+          font-size: $font-size-6;
+          margin: 0;
+        }
+
+        .item__text {
+          text-align: justify;
+          opacity: 0.8;
+          padding: 0 $content-padding-mobile 2rem;
+        }
+        .item__btn {
+          margin: 0 $content-padding-mobile 2rem;
+        }
+        .item__icon {
+          margin-left: auto;
+          transition: 0.3s;
+          transform: rotate(0deg);
+          font-size: $font-size-8;
+        }
+
+        @include media-breakpoint-up(sm) {
+          .item__text {
+            font-size: $font-size-3;
+            padding-right: calc(3.75rem + #{$content-padding-mobile});
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      background: linear-gradient(
+        180deg,
+        rgba(get-theme-value("yellow", "10"), 0.5) 0%,
+        rgba(get-theme-value("yellow", "10"), 0) 100%
+      );
+      padding-bottom: 5.5rem;
+    }
+  }
+
+  &.section_prices {
+    @include background-gradient-primary(0.2, 0);
+    padding-bottom: 80px;
+
+    // Code below handles animal images positioning
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      top: -9rem;
+
+      background-image: url("../../../../public/images/public/illustrations/boxer.png");
+
+      background-position: calc(100% + 5rem) 5rem;
+      background-size: auto 8rem;
+
+      @include media-breakpoint-up(sm) {
+        background-position: calc(100% + 7rem) 5rem;
+        background-size: auto 10rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        background-position: calc(100% + 7.5rem) 4rem;
+        background-size: auto 12rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        background-position: calc(100% + 7.5rem) 2rem;
+        background-size: auto 15rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        background-position: calc(100% + 6.5rem) 0;
+        background-size: auto 18rem;
+      }
+    }
+
+    &:before {
+      top: -7rem;
+
+      background-image: url("../../../../public/images/public/illustrations/bowing-cat.png");
+
+      background-position: calc(100% + 3rem) calc(100% - 1rem);
+      background-size: auto 8rem;
+
+      transform: scaleX(-1);
+
+      @include media-breakpoint-up(lg) {
+        background-position: calc(100% + 2.5rem) 2rem;
+        background-size: auto 15rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        background-position: calc(100% + 2.5rem) 0;
+        background-size: auto 18rem;
+      }
+    }
+
+    .section__row {
+      max-width: 790px;
+    }
+
+    .section__header {
+      font-size: $font-size-9;
+    }
+
+    .section__subheader {
+      font-size: $font-size-6;
+    }
+
+    .section__price-card {
+      height: 100%;
+      border: none;
+      box-shadow: $box-shadow-sm;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background-color: #ceeff5;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        top: -40px;
+        right: 30px;
+      }
+
+      &.section__price-card_services:after {
+        background-image: url("../../../../public/images/public/illustrations/vet-holding-dog.png");
+        background-size: 200px;
+        background-position: -35px -20px;
+      }
+
+      &.section__price-card_diagnostics:after {
+        background-image: url("../../../../public/images/public/illustrations/pet-parent-and-vet-pure.png");
+        background-size: 400px;
+        background-position: -185px -50px;
+      }
+
+      &.section__price-card_dog-vaccines:after {
+        background-image: url("../../../../public/images/public/illustrations/boxer.png");
+        background-size: 170px;
+        background-position: 10px -20px;
+      }
+
+      &.section__price-card_cat-vaccines:after {
+        background-image: url("../../../../public/images/public/illustrations/black-cat.png");
+        background-size: 150px;
+        background-position: 25px 15px;
+      }
+
+      .card-body {
+        padding: 22px 32px;
+      }
+
+      @include media-breakpoint-up(sm) {
+        &:after {
+          right: 60px;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .price-card__header {
+          font-size: $font-size-6;
+        }
+
+        .price-card__subheader {
+          font-size: $font-size-3;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        &:after {
+          right: 80px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      .section__header {
+        font-size: $font-size-10;
+      }
+
+      .section__text-content {
+        font-size: $font-size-4;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .section__header {
+        font-size: $font-size-11;
+      }
+
+      .section__subheader {
+        font-size: $font-size-7;
+      }
+
+      .section__text-content {
+        font-size: $font-size-5;
+      }
+
+      .section__table {
+        font-size: $font-size-2;
+      }
+    }
+  }
+
+  &.quotes-section {
+    background: get-theme-value("yellow", "10");
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+}

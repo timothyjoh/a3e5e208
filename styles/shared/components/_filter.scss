@@ -1,0 +1,26 @@
+.filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2.25rem;
+  padding: 0 1rem;
+  border-radius: 1.25rem;
+
+  font-weight: $font-weight-medium;
+  color: get-theme-value("green-dark", "100");
+
+  border: 1px solid get-theme-value("gray", "100");
+
+  background-color: get-theme-value("white", "100");
+
+  &.filter_state_active {
+    background-color: get-theme-value("orange", "100");
+    color: get-theme-value("white", "100");
+    border-color: get-theme-value("orange", "100");
+  }
+  &.filter_state_closable {
+    justify-content: space-between;
+    padding-right: 0.5rem;
+  }
+}

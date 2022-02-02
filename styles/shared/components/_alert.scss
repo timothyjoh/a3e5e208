@@ -1,0 +1,18 @@
+.alert {
+  text-align: center;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+
+  &.alert-danger {
+    background-color: rgba($danger, 0.2);
+    border-color: $danger;
+  }
+  &.alert-success {
+    background-color: rgba($success, 0.2);
+    border-color: $success;
+  }
+  &.alert-warning {
+    background-color: rgba($warning, 0.2);
+    border-color: $warning;
+  }
+}

@@ -1,0 +1,95 @@
+.app-logo {
+  display: inline-flex;
+  position: relative;
+  margin-right: 1rem;
+
+  &.app-logo_size-md {
+    height: 1.625rem;
+
+    .app-logo__title {
+      line-height: 1.375rem;
+      font-size: 1.375rem;
+    }
+
+    .app-logo__badge {
+      left: 0.85rem;
+    }
+  }
+
+  &.app-logo_size-sm {
+    height: 1.5rem;
+
+    .app-logo__title {
+      line-height: 1.25rem;
+      font-size: 1.25rem;
+    }
+
+    .app-logo__badge {
+      left: 0.75rem;
+    }
+  }
+
+  .app-logo__image {
+    height: 100%;
+    display: block;
+  }
+
+  .app-logo__badge {
+    position: absolute;
+    // Center left top corner of badge on logo
+    top: 50%;
+    // Translate badge to place on the center of logo
+    transform: translate(-50%, -50%);
+
+    font-size: 50%;
+  }
+  .app-logo__title {
+    font-family: $font-family-secondary;
+
+    &-full-color {
+      color: $secondary;
+    }
+    &-grayscale {
+      color: get-theme-value("gray-dark", "100");
+    }
+    &-one-color {
+      color: $black;
+    }
+    &-inverted,
+    &-reverse {
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &.app-logo_size-md {
+      height: 2.5rem;
+
+      .app-logo__title {
+        line-height: 2rem;
+        font-size: 2rem;
+      }
+
+      .app-logo__badge {
+        left: 1.35rem;
+      }
+    }
+
+    &.app-logo_size-sm {
+      height: 2rem;
+
+      .app-logo__title {
+        line-height: 1.625rem;
+        font-size: 1.625rem;
+      }
+
+      .app-logo__badge {
+        left: 1.05rem;
+      }
+    }
+
+    .app-logo__badge {
+      font-size: 75%;
+    }
+  }
+}

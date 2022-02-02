@@ -1,0 +1,79 @@
+@import "bootstrap/scss/bootstrap-grid";
+
+#toast-container {
+  // Push our toastrs below the navbar
+  margin-top: calc(#{$navbar-height} - 2.5rem);
+  margin-right: 0.25rem;
+  border-radius: $border-radius;
+  @include media-breakpoint-up(sm) {
+    margin-right: 0.5rem;
+  }
+  @include media-breakpoint-up(md) {
+    margin-right: 1rem;
+  }
+  & > .toast {
+    border: none;
+    box-shadow: $box-shadow;
+    background-size: auto 1.25rem;
+    background-position: 1rem 1rem;
+    padding: 1rem 1rem 1rem 3.125rem;
+    opacity: 0.95;
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+    &.toast-error {
+      background-color: darken($danger, 21);
+    }
+    &.toast-info {
+      background-color: darken($info, 10);
+    }
+    &.toast-success {
+      background-color: darken($success, 21);
+    }
+    &.toast-warning {
+      background-color: darken($warning, 21);
+    }
+
+    .toast-progress {
+      opacity: 0.15;
+    }
+
+    .toast-title,
+    .toast-message {
+      padding-right: 1rem;
+      line-height: $line-height-custom;
+    }
+    .toast-title {
+      // Here and further we use "(icon-height - line-height) / 2"
+      // To place first line of text on the center of icon
+      padding-top: calc((1.25rem - #{$line-height-custom}rem) / 2);
+      font-weight: $font-weight-medium;
+    }
+    .toast-message {
+      padding-bottom: calc((1.25rem - #{$line-height-custom}rem) / 2);
+      white-space: pre-line;
+    }
+    // This rule gives a margin-top to message if title is provided
+    .toast-title + .toast-message {
+      margin-top: 0.4rem;
+    }
+    // This rule works only if title OR message provided
+    .toast-title:nth-last-child(1),
+    .toast-message:nth-child(3) {
+      padding-top: calc((1.25rem - #{$line-height-custom}rem) / 2);
+      padding-bottom: calc((1.25rem - #{$line-height-custom}rem) / 2);
+    }
+
+    .toast-close-button {
+      opacity: 0.8;
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+      &:hover,
+      &:focus {
+        color: get-theme-value("white", "100");
+        opacity: 0.7;
+      }
+    }
+  }
+}

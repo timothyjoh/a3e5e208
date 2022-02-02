@@ -1,0 +1,127 @@
+.table {
+  td,
+  th {
+    border-color: $table-border-color;
+
+    &.fit {
+      white-space: nowrap;
+      width: 1%;
+    }
+  }
+
+  & > thead th {
+    font-size: $font-size-5;
+  }
+
+  &.table-rounded {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none;
+
+    & > tbody,
+    & > thead {
+      & > tr {
+        & > th,
+        & > td {
+          &:first-child {
+            border-left-width: $table-border-width;
+            border-left-style: solid;
+          }
+
+          &:last-child {
+            border-right-width: $table-border-width;
+            border-right-style: solid;
+          }
+        }
+      }
+
+
+      &:last-child {
+        & > tr:last-child {
+          & > td,
+          & > th {
+            border-bottom-width: $table-border-width;
+            border-bottom-style: solid;
+          }
+
+          & > :first-child {
+            border-bottom-left-radius: $border-radius;
+          }
+
+          & > :last-child {
+            border-bottom-right-radius: $border-radius;
+          }
+        }
+      }
+
+      &:first-child {
+        & > tr:first-child {
+          & > td,
+          & > th {
+            border-bottom-width: $table-border-width;
+          }
+
+          & > :first-child {
+            border-top-left-radius: $border-radius;
+          }
+
+          & > :last-child {
+            border-top-right-radius: $border-radius;
+          }
+        }
+      }
+    }
+
+    &.table-bordered {
+      & > tbody,
+      & > thead {
+        & > tr {
+          & > td,
+          & > th {
+            border-top-width: 0;
+
+            &:not(:last-child) {
+              border-right-width: 0;
+            }
+          }
+
+          &:first-child {
+            & > td,
+            & > th {
+              border-top-width: $table-border-width;
+              border-top-style: solid;
+            }
+          }
+        }
+      }
+    }
+
+    &.table-striped {
+      & > tbody {
+        & > tr:nth-of-type(#{$table-striped-order}) {
+          background-color: inherit;
+
+          & > td,
+          & > th {
+            background-color: $table-accent-bg;
+          }
+        }
+      }
+    }
+
+    &.table-hover {
+      & > tbody > tr {
+        &:hover {
+          color: inherit;
+          background-color: inherit;
+
+          & > td,
+          & > th {
+            color: $table-hover-color;
+            background-color: $table-hover-bg;
+          }
+        }
+      }
+    }
+  }
+}

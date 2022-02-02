@@ -1,0 +1,42 @@
+.rounded-badge {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-2;
+
+  &.rounded-badge_variant_default {
+    background-color: get-theme-value("gray-light", "100");
+  }
+  &.rounded-badge_variant_danger {
+    background-color: get-theme-value("red", "20");
+  }
+  &.rounded-badge_variant_light-blue {
+    background-color: get-theme-value("blue-light", "30");
+  }
+  &.rounded-badge_variant_gold {
+    background-color: get-theme-value("gold", "100");
+    color: $white;
+  }
+  &.rounded-badge_variant_very-light-blue {
+    background-color: get-theme-value("blue-light", "10");
+  }
+
+  &.rounded-badge_size_xs {
+    width: 1.125rem;
+    height: 1.125rem;
+    font-size: 0.625rem;
+  }
+  &.rounded-badge_size_sm {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &.rounded-badge_size_md {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  &.rounded-badge_size_lg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

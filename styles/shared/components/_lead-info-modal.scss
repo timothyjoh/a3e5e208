@@ -1,0 +1,19 @@
+#lead-info-modal {
+  &.is-loading .modal-dialog .modal-content {
+    position: relative;
+    &::after {
+      @include with-spinner(6rem);
+      position: absolute;
+      content: "";
+      background-color: rgba(get-theme-value("white", "100"), 0.85);
+      border-radius: $border-radius;
+    }
+  }
+
+  .modal-logo {
+    height: 40px;
+  }
+  .modal-content {
+    @include background-gradient-secondary(1, 1, true);
+  }
+}

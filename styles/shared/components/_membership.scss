@@ -1,0 +1,23 @@
+.membership {
+  display: inline;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  font-size: 0.825em;
+
+  .membership__icon {
+    color: get-theme-value("gold", "100");
+    font-weight: $font-weight-bold;
+  }
+
+  span.membership__icon {
+    vertical-align: super;
+    font-size: 80%;
+  }
+
+  img.membership__icon {
+    position: relative;
+    vertical-align: baseline;
+    top: -0.4em;
+    height: 0.5em;
+  }
+}

@@ -1,0 +1,19 @@
+.location-book-now-modal {
+  .location-book-now-modal__badge {
+    @include media-breakpoint-only(xs) {
+      height: 1.375rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      font-size: $font-size-1;
+    }
+  }
+
+  .location-book-now-modal__image {
+    width: 100%;
+    height: 120px;
+
+    @include media-breakpoint-up(sm) {
+      height: 200px;
+    }
+  }
+}

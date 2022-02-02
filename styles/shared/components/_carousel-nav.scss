@@ -1,0 +1,22 @@
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  .item.carousel-nav__item {
+    margin-right: 0.75rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    .item__btn {
+      height: 0.75rem;
+      width: 0.75rem;
+      padding: 0;
+      border-radius: 50%;
+      background-color: get-theme-value("gray", "100");
+    }
+    &.carousel-nav__item_state_active {
+      .item__btn {
+        background-color: $primary;
+      }
+    }
+  }
+}

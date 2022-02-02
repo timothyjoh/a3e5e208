@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.4576 30.2491">
+    <style>
+        path {
+            fill: #bb9a3b;
+            -webkit-animation: pulse 1.4s infinite;
+                    animation: pulse 1.4s infinite;
+        }
+        path:nth-last-child(7) {
+            -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+        }
+
+        path:nth-last-child(6) {
+            -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+        }
+
+        path:nth-last-child(5) {
+            -webkit-animation-delay: 0.6s;
+                    animation-delay: 0.6s;
+        }
+
+        path:nth-last-child(4) {
+            -webkit-animation-delay: 0.8s;
+                    animation-delay: 0.8s;
+        }
+
+        path:nth-last-child(3) {
+            -webkit-animation-delay: 1s;
+                    animation-delay: 1s;
+        }
+
+        path:nth-last-child(2) {
+            -webkit-animation-delay: 1.2s;
+                    animation-delay: 1.2s;
+        }
+
+        path:nth-last-child(1) {
+            -webkit-animation-delay: 1.4s;
+                    animation-delay: 1.4s;
+        }
+        @-webkit-keyframes pulse {
+            0% {
+                fill: #bb9a3b;
+            }
+            10% {
+                fill: #034752;
+            }
+            20% {
+                fill: #bb9a3b;
+            }
+            100% {
+                fill: #bb9a3b;
+            }
+        }
+        @keyframes pulse {
+            0% {
+                fill: #bb9a3b;
+            }
+            10% {
+                fill: #034752;
+            }
+            20% {
+                fill: #bb9a3b;
+            }
+            100% {
+                fill: #bb9a3b;
+            }
+        }
+    </style>
+    <path d="M24.9687,25.7529A1.9626,1.9626,0,1,0,23.0142,23.79,1.9585,1.9585,0,0,0,24.9687,25.7529Z"/>
+    <path d="M15.8031,25.5745a2.4241,2.4241,0,0,0-1.99,2.8191,2.4557,2.4557,0,0,0,3.0917,1.4987,2.424,2.424,0,0,0,1.99-2.8191A2.44,2.44,0,0,0,15.8031,25.5745Z"/>
+    <path d="M7.2741,26.86a3.0479,3.0479,0,0,0,3.2338-2.819,3.0479,3.0479,0,0,0-3.2338-2.8191A3.0479,3.0479,0,0,0,4.04,24.0405,3.0479,3.0479,0,0,0,7.2741,26.86Z"/>
+    <path d="M7.6643,16.7245c1.066-1.6772.32-4.0323-1.67-5.3169-1.99-1.249-4.442-.9279-5.5081.7136-1.0661,1.6772-.32,4.0323,1.67,5.3169S6.5982,18.4017,7.6643,16.7245Z"/>
+    <path d="M11.8554.0963C9.83-.439,7.5911,1.31,6.8448,4.0572s.2843,5.424,2.31,5.9593,4.2643-1.2133,5.0106-3.961C14.9471,3.3078,13.881.6315,11.8554.0963Z"/>
+    <path d="M23.8408,9.1745c2.83-1.9187,4.1544-4.9173,2.9575-6.6977s-4.4616-1.6683-7.2919.25-4.1545,4.9173-2.9575,6.6977S21.0105,11.0931,23.8408,9.1745Z"/>
+    <path d="M27.6346,18.5452c3.7682,0,6.823-1.5018,6.823-3.3543s-3.0548-3.3543-6.823-3.3543-6.823,1.5018-6.823,3.3543S23.8663,18.5452,27.6346,18.5452Z"/>
+</svg>

@@ -1,0 +1,45 @@
+$custom-icons-size: 2.875rem;
+
+$custom-icons: (
+  "membership": "../../../public/images/public/custom-icons/membership.svg",
+  "neutered": "../../../public/images/public/custom-icons/neutered.svg",
+  "spayed": "../../../public/images/public/custom-icons/spayed.svg",
+  "stethoscope": "../../../public/images/public/custom-icons/stethoscope.svg",
+  "subscription": "../../../public/images/public/custom-icons/subscription.svg",
+  "syringe": "../../../public/images/public/custom-icons/syringe.svg",
+  "tooth": "../../../public/images/public/custom-icons/tooth.svg",
+  "zendesk": "../../../public/images/public/custom-icons/zendesk.svg",
+);
+
+// Classes for including custom icons
+//
+// Example:
+// <i class="custom-icon_syringe custom-icon_size-sm"></i>
+
+@each $icon-name, $icon-value in $custom-icons {
+  .custom-icon_#{$icon-name} {
+    display: inline-block;
+    width: $custom-icons-size;
+    height: $custom-icons-size;
+    flex-shrink: 0;
+    background: url(#{$icon-value}) no-repeat center center/contain;
+    user-select: none;
+
+    &.custom-icon_size-xs {
+      width: 1rem;
+      height: 1rem;
+    }
+    &.custom-icon_size-sm {
+      width: 2rem;
+      height: 2rem;
+    }
+    &.custom-icon_size-md {
+      width: 3rem;
+      height: 3rem;
+    }
+    &.custom-icon_size-lg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

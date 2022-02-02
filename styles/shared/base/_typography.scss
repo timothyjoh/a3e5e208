@@ -1,0 +1,212 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.label {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-medium;
+  color: get-theme-value("green-dark", "100");
+}
+
+.sub-headline,
+.body-1,
+.body-2 {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  color: get-theme-value("green-dark", "100");
+}
+
+a {
+  font-weight: $font-weight-medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: $line-height-custom;
+}
+
+.sub-headline,
+label {
+  line-height: $headings-line-height;
+}
+
+// Our typography elements are non-responsive by default.
+// If you want to make them responsive - simply add 'responsive-font' class
+
+// All the font sizes and line-height values are stored in frontend/stylesheets/shared/abstracts/_fonts.scss
+
+h1,
+.h1 {
+  font-size: $font-size-11;
+  letter-spacing: -1px;
+
+  &.responsive-font {
+    font-size: var(--font-size-11);
+  }
+}
+
+h2,
+.h2 {
+  font-size: $font-size-10;
+  letter-spacing: -1px;
+
+  &.responsive-font {
+    font-size: var(--font-size-10);
+  }
+}
+
+h3,
+.h3 {
+  font-size: $font-size-9;
+
+  &.responsive-font {
+    font-size: var(--font-size-9);
+  }
+}
+
+h4,
+.h4 {
+  font-size: $font-size-7;
+
+  &.responsive-font {
+    font-size: var(--font-size-7);
+  }
+}
+
+h5,
+.h5 {
+  font-size: $font-size-6;
+
+  &.responsive-font {
+    font-size: var(--font-size-6);
+  }
+}
+
+h6,
+.h6 {
+  font-size: $font-size-5;
+
+  &.responsive-font {
+    font-size: var(--font-size-5);
+  }
+}
+
+.sub-headline {
+  font-size: $font-size-8;
+
+  &.responsive-font {
+    font-size: var(--font-size-8);
+  }
+}
+
+.label {
+  font-size: $font-size-3;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  &.responsive-font {
+    font-size: var(--font-size-3);
+  }
+}
+
+.body-1 {
+  font-size: $font-size-5;
+
+  &.responsive-font {
+    font-size: var(--font-size-5);
+  }
+}
+
+.body-2 {
+  font-size: $font-size-3;
+
+  &.responsive-font {
+    font-size: var(--font-size-3);
+  }
+}
+
+.small-text-1 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-2;
+
+  &.responsive-font {
+    font-size: var(--font-size-2);
+  }
+}
+
+.small-text-2 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-1;
+
+  &.responsive-font {
+    font-size: var(--font-size-1);
+  }
+}
+
+.accent-1 {
+  font-size: $font-size-4;
+  font-weight: $font-weight-medium;
+
+  &.responsive-font {
+    font-size: var(--font-size-4);
+  }
+}
+
+.accent-2 {
+  font-size: $font-size-3;
+  font-weight: $font-weight-medium;
+
+  &.responsive-font {
+    font-size: var(--font-size-3);
+  }
+}
+
+.accent-3 {
+  font-size: $font-size-2;
+  font-weight: $font-weight-medium;
+
+  &.responsive-font {
+    font-size: var(--font-size-2);
+  }
+}
+
+.accent-4 {
+  font-size: $font-size-1;
+  font-weight: $font-weight-medium;
+
+  &.responsive-font {
+    font-size: var(--font-size-1);
+  }
+}
+
+.font-primary {
+  font-family: $font-family-primary !important;
+}
+
+.font-secondary {
+  font-family: $font-family-secondary !important;
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium !important;
+}
+
+.white-space-pre-line {
+  white-space: pre-line;
+}
