@@ -63,8 +63,4 @@ jobs:
       - name: TypeScript
         run: yarn build
 
-  rspec:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Nothing at all
-      run: echo Nothing to do here!
+
