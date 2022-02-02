@@ -53,6 +53,7 @@ jobs:
 
       - name: Install Playwright.dev browsers
         run: npx playwright install
+        run: sudo npx playwright install-deps
 
       - name: ESLint
         run: yarn lint
