@@ -52,8 +52,9 @@ jobs:
         run: yarn install --prefer-offline --frozen-lockfile
 
       - name: Install Playwright.dev browsers
-        run: npx playwright install
-        run: sudo npx playwright install-deps
+        run: |
+          npx playwright install
+          sudo npx playwright install-deps
 
       - name: ESLint
         run: yarn lint
