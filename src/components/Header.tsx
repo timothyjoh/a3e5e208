@@ -36,14 +36,18 @@ export const Header: React.FC = () => (
     <nav className="navbar navbar-expand-md header__navbar">
       <div className="container-xl h-100 header__container">
         <div className="app-logo app-logo_size-md">
-          <a className="h-100" href="/">
-            <Image src={logo} alt="OneVet logo" />
-          </a>
+          <Link href="/">
+            <a className="h-100">
+              <Image src={logo} alt="OneVet logo" />
+            </a>
+          </Link>
         </div>
         <div className="app-logo app-logo_size-md header__app-logo header__app-logo_mobile">
-          <a className="h-100" href="/">
-            <Image src={invertedLogo} alt="OneVet logo" />
-          </a>
+          <Link href="/">
+            <a className="h-100">
+              <Image src={invertedLogo} alt="OneVet logo" />
+            </a>
+          </Link>
         </div>
 
         <div className="d-none d-md-flex ml-auto">

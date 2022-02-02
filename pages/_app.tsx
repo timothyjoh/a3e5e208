@@ -13,7 +13,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+const App: ReactNode = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
     typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null
   }, [])
