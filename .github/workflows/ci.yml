@@ -51,8 +51,14 @@ jobs:
       - name: Installing JS packages
         run: yarn install --prefer-offline --frozen-lockfile
 
-      - name: Install Playwright Browsers
+      - name: Install Playwright.dev browsers
         run: npx playwright install
+
+      - name: ESLint
+        run: yarn lint
+
+      - name: TypeScript
+        run: yarn build
 
       - name: Jest
         run: yarn test:jest
@@ -60,10 +66,6 @@ jobs:
       - name: E2E
         run: yarn test:e2e
 
-      - name: ESLint
-        run: yarn lint
 
-      - name: TypeScript
-        run: yarn build
 
 
