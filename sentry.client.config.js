@@ -10,8 +10,12 @@ Sentry.init({
   dsn: SENTRY_DSN || "https://d2176eb424e548ba88dbf877a6a0deae@o577104.ingest.sentry.io/5733936",
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1.0,
-  // ...
-  // Note: if you want to override the automatic release value, do not set a
-  // `release` value here - use the environment variable `SENTRY_RELEASE`, so
-  // that it will also get attached to your source maps
+  beforeSend(event, hint) {
+    const error = hint.originalException
+    console.warn("🐞 Sentry Before Send", { event, hint })
+    if (error && error.message && error.message.match(/database unavailable/i)) {
+      event.fingerprint = ["database-unavailable"]
+    }
+    return event
+  },
 })

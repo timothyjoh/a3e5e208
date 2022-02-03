@@ -26,7 +26,12 @@ const ErrorPage = (props: ErrorPageProps): JSX.Element => {
   }
 
   if (!isReadyToRender && err) {
-    Sentry.captureException(err)
+    Sentry.configureScope((scope) => {
+      scope.setTag("source", "next.js")
+      scope.setTag("page", "_error Page")
+
+      Sentry.captureException(err)
+    })
   }
 
   return <>{children ?? <NextErrorComponent statusCode={statusCode} />}</>
@@ -54,7 +59,12 @@ ErrorPage.getInitialProps = async (props: NextPageContext): Promise<ErrorProps> 
   }
 
   if (err) {
-    Sentry.captureException(err)
+    Sentry.configureScope((scope) => {
+      scope.setTag("source", "next.js")
+      scope.setTag("page", "_error Page -> getInitialProps")
+
+      Sentry.captureException(err)
+    })
     await Sentry.flush(2000)
     return errorInitialProps
   }
