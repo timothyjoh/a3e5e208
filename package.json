@@ -1,10 +1,12 @@
 {
   "name": "fresh-next",
   "private": true,
+  "cacheDirectories": [".next/cache"],
   "scripts": {
     "dev": "next dev -p 4444",
     "build": "next build",
     "start": "next start",
+    "start:heroku": "next start -p $PORT",
     "ci": "yarn lint && yarn build && yarn test",
     "lint": "next lint",
     "test": "yarn test:jest && yarn test:e2e",
