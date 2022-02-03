@@ -60,7 +60,7 @@ jobs:
         run: yarn lint
 
       - name: TypeScript
-        run: yarn build
+        run: yarn build --log-level=debug
 
       - name: Jest
         run: yarn test:jest
