@@ -30,7 +30,7 @@ export const Index: NextPageWithLayout = () => {
           <button
             type="button"
             onClick={() => {
-              throw new Error("Sentry Frontend Error")
+              throw new Error("Frontend Error in React")
             }}
           >
             Throw error
