@@ -26,6 +26,15 @@ export const Index: NextPageWithLayout = () => {
           >
             Book Now
           </button>
+          or
+          <button
+            type="button"
+            onClick={() => {
+              throw new Error("Frontend Error in React")
+            }}
+          >
+            Throw error
+          </button>
         </div>
 
         <div className="container-xl h-100">
