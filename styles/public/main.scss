@@ -13,9 +13,6 @@
 @import "bootstrap/scss/mixins/_border-radius";
 @import "toastr/toastr";
 
-@at-root {
-  @import "../shared/vendors/fontawesome";
-}
 
 // Base styles and typography
 @import "../shared/base/_base-dir";
